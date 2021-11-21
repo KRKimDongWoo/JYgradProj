@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Main Page</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css?a" />
+    <link rel="stylesheet" href="/build/main.css?a" />
+    <script>
+      (function(d) {
+        let config = {
+          kitId: 'iby0zzi',
+                  scriptTimeout: 3000,
+                  async: true
+                },
+                h = d.documentElement, t = setTimeout(function () {
+                  h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                  }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+<!--    <script>-->
+<!--      function autoResizeDiv() {-->
+<!--        document.getElementById('index-body').style.height = window.innerHeight +'px';-->
+<!--        document.getElementById('index-body').style.overflow = 'hidden';-->
+<!--      }-->
+<!--      window.onresize = autoResizeDiv;-->
+<!--      autoResizeDiv();-->
+<!--    </script>-->
+    <script defer src="/build/main.js"></script>
+  </head>
+
+  <body></body>
+</html>
