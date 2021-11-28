@@ -62,3 +62,121 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+.back-link {
+	position: absolute;
+	top: 36px;
+	left: 52px;
+
+	text-align: left;
+	font: normal normal 900 24px/36px noto-sans-cjk-kr;
+	letter-spacing: 0;
+	color: #000000;
+	opacity: 1;
+}
+
+.form-title {
+	text-align: left;
+	width: 100%;
+	margin: 132px 337px 132px 0;
+	font: normal normal 500 48px/84px noto-sans-cjk-kr;
+	letter-spacing: 0;
+	color: #000000;
+	opacity: 1;
+}
+
+.form-general {
+	position: relative;
+
+	width: fit-content;
+}
+
+.form-input {
+	background: #FFFFFF 0 0 no-repeat padding-box;
+	border: 2px solid #707070;
+	opacity: 1;
+	margin: 0;
+
+	text-align: left;
+	font: normal normal 500 42px/72px noto-sans-cjk-kr;
+	letter-spacing: 6px;
+	color: #000000;
+}
+
+.form-input:invalid {
+	border: 2px solid #FF0000;
+	opacity: 1;
+}
+
+.form-input:valid {
+	border: 2px solid #707070;
+	opacity: 1;
+}
+
+.form-input:focus {
+	color: #348AFD;
+}
+
+.form-input::placeholder {
+	color: #CDCDCD;
+}
+
+.scroll-button-wrapper {
+	width: 100%;
+	height: fit-content;
+
+	position: absolute;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scroll-container {
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.scroll-container:hover {
+	opacity: 1;
+}
+
+.scroll-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.scroll-text {
+	margin: 16px 0;
+
+	text-align: center;
+	font: normal normal 500 18px/27px noto-sans-cjk-kr;
+	letter-spacing: 0;
+	color: #000000;
+	opacity: inherit;
+}
+
+.scroll-button-b {
+	display: block;
+	height: 14px;
+	width: 0;
+	margin: 0 4px;
+
+	border: 1px solid #000000;
+	opacity: inherit;
+
+	transform: rotate(135deg);
+}
+
+.scroll-button-a {
+	display: block;
+	height: 14px;
+	width: 0;
+	margin: 0 4px;
+
+	border: 1px solid #000000;
+	opacity: inherit;
+
+	transform: rotate(45deg);
+}

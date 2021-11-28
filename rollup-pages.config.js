@@ -10,7 +10,12 @@ const inputs = [
     input: "src/scrollForm.js",
     output: { file: "public/build/scrollForm.js", name: "scrollForm" },
     css: "public/build/scrollForm.css",
-  }, //object for setting more specific values for input and output of roolup configuration
+  },
+  {
+    input: "src/hello.js",
+    output: { file: "public/build/hello.js", name: "hello" },
+    css: "public/build/hello.css",
+  },
 ];
 const production = !process.env.ROLLUP_WATCH;
 

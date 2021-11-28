@@ -1,5 +1,4 @@
 <script>
-  export let name;
   import Chip from "./components/chip";
 
   let searched = false;
@@ -22,6 +21,10 @@
       mainDiv.style.overflow = 'auto';
       mainDiv.style.height = 'fit-content';
     }
+  }
+
+  function toHelloPage(e) {
+    window.location="/hello.html";
   }
 
   const quickSearch = [
@@ -96,9 +99,7 @@
 
     text-align: left;
 
-    font-size: 48px;
-    font-weight: normal;
-    line-height: 84px;
+    font: normal normal 900 48px/84px noto-sans-cjk-kr;
     letter-spacing: 0;
 
     color: #FDFDFA;
@@ -134,8 +135,8 @@
     border: 4px solid #CDCDCD;
     border-radius: 10px;
     opacity: 1;
+    font: normal normal 500 42px/72px noto-sans-cjk-kr;
 
-    font-size: 42px;
     text-align: left;
     letter-spacing: 6px;
     color: #CDCDCD;
@@ -194,8 +195,7 @@
     width: 616px;
     height: 47px;
 
-    font-size: 32px;
-    font-weight: normal;
+    font: normal normal 500 32px/84px noto-sans-cjk-kr;
     letter-spacing: 0;
 
     color: #FDFDFA;
@@ -214,9 +214,8 @@
 
   .index-result-th {
     text-align: left;
-    font-size: 28px;
-    font-weight: normal;
 
+    font: normal normal 500 28px/84px noto-sans-cjk-kr;
     letter-spacing: 0;
     color: #6BAAFF;
     opacity: 1;
@@ -228,12 +227,15 @@
     background: #FFFFFF07 0 0 no-repeat padding-box;
   }
 
+  .index-result-tr:hover {
+    background: #FFFFFF80 0 0 no-repeat padding-box;
+  }
+
   .index-result-td {
     height: 100%;
     text-align: left;
 
-    font-size: 28px;
-    font-weight: normal;
+    font: normal normal 500 28px/84px noto-sans-cjk-kr;
     letter-spacing: 0;
 
     color: #FDFDFA;
@@ -265,13 +267,11 @@
     background: #348AFD 0 0 no-repeat padding-box;
     border: none;
 
-    font-size: 24px;
-    font-weight: normal;
+    font: normal normal 500 24px/24px noto-sans-cjk-kr;
     letter-spacing: 0;
 
     color: #FDFDFA;
     opacity: 1;
-
   }
 
   .index-result-pages {
@@ -288,8 +288,7 @@
     text-align: center;
 
     color: #FFFFFF;
-    font-size: 30px;
-    font-weight: normal;
+    font: normal normal 500 30px/87px Noto Sans CJK KR;
     line-height: 66px;
 
     background: #FFFFFF00 0 0 no-repeat padding-box;
@@ -309,12 +308,6 @@
   .index-result-page-box_selected {
     color: #000000;
     background: #FFFFFFFF 0 0 no-repeat padding-box;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
   }
 </style>
 
@@ -354,7 +347,9 @@
               <td class="index-result-td index-result-td-1">{name}</td>
               <td class="index-result-td index-result-td-2">{big}</td>
               <td class="index-result-td index-result-td-3">{small}</td>
-              <td class="index-result-td index-result-td-4"><button class="index-result-button">신청하기 ></button></td>
+              <td class="index-result-td index-result-td-4">
+                <button class="index-result-button" on:click={toHelloPage}>신청하기 ></button>
+              </td>
             </tr>
           {/each}
           </tbody>

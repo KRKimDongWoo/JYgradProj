@@ -5,20 +5,24 @@
 <style>
     .chip-main {
         margin: 4px;
+        padding: 12px 36px;
 
         width: fit-content;
-        height: fit-content;
 
         background: #474747 0 0 no-repeat padding-box;
         border: 2px solid #FFFFFF;
         border-radius: 35px;
         opacity: 1;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
     .chip-text {
-        margin: 4px 16px;
+        margin: 0;
+        padding: 0;
 
-        font-size: 24px;
-        font-weight: normal;
+        font: normal normal normal 24px noto-sans-cjk-kr;
         text-align: center;
 
         letter-spacing: 0;
