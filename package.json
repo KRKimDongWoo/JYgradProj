@@ -17,6 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@imask/svelte": "^6.2.2",
     "sirv-cli": "^1.0.0",
     "svelte-fullpage": "^0.3.1"
   }

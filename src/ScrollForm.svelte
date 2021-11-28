@@ -5,6 +5,7 @@
   import {writable} from "svelte/store";
   import {setContext} from "svelte";
   import Page00 from "./Forms/Page00.svelte";
+  import Page01 from "./Forms/Page01.svelte";
 
   const answerStore = writable({});
   const answerValid = writable({});
@@ -48,7 +49,7 @@
       <Page00/>
     </ScrollformFullpage>
     <ScrollformFullpage section={"commissioner"} page={"id-num"}>
-      <h1>Page 2</h1>
+      <Page01/>
     </ScrollformFullpage>
     <ScrollformFullpage section={"commissioner"} page={"address"}>
       <h1>Page 3</h1>
