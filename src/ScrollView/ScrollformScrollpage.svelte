@@ -30,12 +30,18 @@
         position: relative;
         width: 100%;
         height: 100%;
+
+        box-sizing: border-box;
+        padding: 0 0 0 152px;
+
+        display: flex;
+        align-items: center;
     }
 
 </style>
 
 {#if visible}
-    <div transition:slide={transition} class="scrollform-fullpage">
+    <div transition:slide={transition} class="scrollform-fullpage" style="overflow: auto">
         <slot/>
     </div>
 {/if}

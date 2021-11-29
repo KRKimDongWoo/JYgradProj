@@ -46,14 +46,14 @@
 
         let deltaY = event.deltaY;
         if (deltaY < 0) {
-            scrollUp()
+            scrollUp(false)
         } else if (deltaY > 0) {
-            scrollDown()
+            scrollDown(false)
         }
     };
 
-    const scrollUp = async () => {
-        if (!$scrollEnableStore)
+    const scrollUp = async (force) => {
+        if (!force && !$scrollEnableStore)
             return;
 
         if ($activePageStore <= 0)
@@ -62,8 +62,8 @@
         activePageStore.update(n => n - 1);
     };
 
-    const scrollDown = async () => {
-        if (!$scrollEnableStore)
+    const scrollDown = async (force) => {
+        if (!force && !$scrollEnableStore)
             return;
 
         const page = pages[$activeSectionStore];
@@ -73,9 +73,18 @@
         }
     };
 
+    const nextSection = () => {
+        console.log(`${$activeSectionStore} vs ${sections.length}`)
+        if ($activeSectionStore < sections.length - 1) {
+            activeSectionStore.update(n => n + 1);
+            activePageStore.set(0);
+        }
+    }
+
     setContext('scroll', {
         scrollDown: scrollDown,
-        scrollUp: scrollUp
+        scrollUp: scrollUp,
+        nextSection: nextSection,
     });
 
     const scrollEnableStore = writable(false);

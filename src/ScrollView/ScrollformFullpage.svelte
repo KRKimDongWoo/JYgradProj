@@ -41,7 +41,7 @@
 </style>
 
 {#if visible}
-<div transition:slide={transition} class="scrollform-fullpage">
+<div transition:slide={transition} class="scrollform-fullpage" style="overflow: hidden">
     <slot/>
 </div>
 {/if}

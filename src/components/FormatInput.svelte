@@ -7,6 +7,7 @@
     import { get } from 'svelte/store'
 
     export let answerKey;
+    export let answerIdx;
     export let errorMessage;
     export let pattern;
     export let placeHolder;
@@ -41,6 +42,24 @@
     }
     .page01-input {
         width: 676px;
+        height: 94px;
+    }
+    .page020-input {
+        margin-bottom: 32px;
+
+        width: 1333px;
+        height: 94px;
+    }
+    .page021-input {
+        width: 1333px;
+        height: 94px;
+    }
+    .page03-input {
+        width: 667px;
+        height: 94px;
+    }
+    .page04-input {
+        width: 1333px;
         height: 94px;
     }
 </style>

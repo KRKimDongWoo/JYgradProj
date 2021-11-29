@@ -6,6 +6,12 @@
   import {setContext} from "svelte";
   import Page00 from "./Forms/Page00.svelte";
   import Page01 from "./Forms/Page01.svelte";
+  import Page02 from "./Forms/Page02.svelte";
+  import Page04 from "./Forms/Page04.svelte";
+  import Page03 from "./Forms/Page03.svelte";
+  import Page05 from "./Forms/Page05.svelte";
+  import Page06 from "./Forms/Page06.svelte";
+  import Page10 from "./Forms/Page10.svelte";
 
   const answerStore = writable({});
   const answerValid = writable({});
@@ -52,19 +58,22 @@
       <Page01/>
     </ScrollformFullpage>
     <ScrollformFullpage section={"commissioner"} page={"address"}>
-      <h1>Page 3</h1>
+      <Page02/>
     </ScrollformFullpage>
     <ScrollformFullpage section={"commissioner"} page={"phone-num"}>
-      <h1>Page 4</h1>
+      <Page03/>
     </ScrollformFullpage>
     <ScrollformFullpage section={"commissioner"} page={"email"}>
-      <h1>Page 5</h1>
+      <Page04/>
     </ScrollformFullpage>
     <ScrollformFullpage section={"commissioner"} page={"check"}>
-      <h1>Page 6</h1>
+      <Page05/>
     </ScrollformFullpage>
     <ScrollformScrollpage section={"commissioner"} page={"review"}>
-      <h1>Page end</h1>
+      <Page06/>
+    </ScrollformScrollpage>
+    <ScrollformScrollpage section={"commission"} page={"name"}>
+      <Page10/>
     </ScrollformScrollpage>
   </ScrollFormContainer>
 </main>
