@@ -1,13 +1,13 @@
 <script>
     import FormatInput from "../components/FormatInput.svelte";
 
-    const key = "03"
+    const key = "15"
 </script>
 
 <style>
 </style>
 <div>
-    <h1 class="form-title">휴대전화번호 혹은 연락처를 입력하세요.</h1>
+    <h1 class="form-title">회사 연락처 혹은 피진정인의 연락처를 입력하세요.</h1>
     <FormatInput
             pattern={"^[0-9]{3}-[0-9]{4}-[0-9]{4}"}
             placeHolder="010-1234-5678"

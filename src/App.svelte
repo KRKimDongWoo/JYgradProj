@@ -142,6 +142,15 @@
     color: #CDCDCD;
   }
 
+  .index-input:hover {
+    border: 4px solid #F7F7F7;
+    color: #F7F7F7;
+  }
+  .index-input:focus {
+    border: 4px solid #F7F7F7;
+    color: #F7F7F7;
+  }
+
   .search-button {
     position: relative;
     height: 118px;

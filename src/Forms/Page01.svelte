@@ -1,5 +1,5 @@
 <script>
-    import CheckerInput from "../components/FormatInput.svelte";
+    import FormatInput from "../components/FormatInput.svelte";
 
     const key = "01"
 </script>
@@ -8,7 +8,7 @@
 </style>
 <div>
     <h1 class="form-title">주민등록번호 13자리를 입력하세요.</h1>
-    <CheckerInput
+    <FormatInput
             pattern={"^[0-9]{6}-[0-9]{7}"}
             placeHolder="580311 - 1231231"
             answerKey={key}

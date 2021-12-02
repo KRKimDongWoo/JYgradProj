@@ -6,8 +6,9 @@
     import { imask } from '@imask/svelte';
     import { get } from 'svelte/store'
 
+    export let title;
+    export let label;
     export let answerKey;
-    export let answerIdx;
     export let errorMessage;
     export let pattern;
     export let placeHolder;
@@ -29,6 +30,7 @@
     })
 
     function checkValidity() {
+        console.log(`${answerKey} - ${input.value}`)
         errorValid = true;
         error = input.validity.patternMismatch;
         $answerValid[answerKey] = !error;
@@ -62,11 +64,82 @@
         width: 1333px;
         height: 94px;
     }
+    .page10-input {
+        width: 444px;
+        height: 94px;
+    }
+    .page11-input {
+        width: 667px;
+        height: 94px;
+    }
+    .page12-input {
+        width: 1333px;
+        height: 94px;
+    }
+    .page140-input {
+        margin-bottom: 32px;
+
+        width: 1333px;
+        height: 94px;
+    }
+    .page141-input {
+        width: 1333px;
+        height: 94px;
+    }
+    .page15-input {
+        width: 667px;
+        height: 94px;
+    }
+
+    .page200-form {
+        margin-right: 132px;
+    }
+    .page200-input {
+        width: 222px;
+        height: 94px;
+    }
+    .page201-form {
+        margin-right: 132px;
+    }
+    .page201-input {
+        width: 148px;
+        height: 94px;
+    }
+    .page202-input {
+        width: 148px;
+        height: 94px;
+    }
+    .page220-form {
+        margin-right: 132px;
+    }
+    .page220-input {
+        width: 222px;
+        height: 94px;
+    }
+    .page221-form {
+        margin-right: 132px;
+    }
+    .page221-input {
+        width: 148px;
+        height: 94px;
+    }
+    .page222-input {
+        width: 148px;
+        height: 94px;
+    }
+    .page25-input {
+        width: 1333px;
+        height: 94px;
+    }
+
 </style>
 
-<form class="form-general">
+<form class="form-general page{answerKey}-form">
+    {#if title != null}
+        <label class="form-number-label-l">{title}</label>
+    {/if}
     {#if iMaskPattern == null}
-        <input class="page00-input form-input page{answerKey}-input"
+        <input class="form-input page{answerKey}-input"
                pattern={pattern}
                placeholder={placeHolder}
                bind:value={$answerStore[answerKey]}
@@ -74,7 +147,7 @@
                on:change={checkValidity}
         >
     {:else}
-        <input class="page00-input form-input page{answerKey}-input"
+        <input class="form-input page{answerKey}-input"
                pattern={pattern}
                placeholder={placeHolder}
                bind:value={$answerStore[answerKey]}
@@ -82,6 +155,9 @@
                use:imask={{mask: iMaskPattern}}
                on:accept={checkValidity}
         >
+    {/if}
+    {#if label != null}
+        <label class="form-number-label-r">{label}</label>
     {/if}
     {#if errorValid}
         <ErrorMessage error={error} inputHeight={inputHeight}>{errorMessage}</ErrorMessage>

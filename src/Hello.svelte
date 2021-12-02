@@ -78,10 +78,13 @@
     }
 
     .hello-info-box-title {
+        margin: 0;
+
         position: absolute;
-        top: 128px;
+        bottom: 146px;
         left: 40px;
         right: 38px;
+        height: fit-content;
 
         text-align: left;
         font: normal normal 300 32px/72px noto-sans-cjk-kr;
@@ -91,19 +94,28 @@
     }
 
     .hello-info-box-desc {
-        position: absolute;
-        top: 204px;
-        left: 40px;
-        right: 38px;
+        height: fit-content;
 
-        height: 72px;
-        vertical-align: bottom;
+        margin: 0;
 
         text-align: left;
         font: normal normal 500 24px/36px noto-sans-cjk-kr;
         letter-spacing: 0;
         color: #000000;
         opacity: 1;
+
+    }
+
+    .hello-info-box-desc-wrapper {
+        position: absolute;
+        bottom: 46px;
+        left: 40px;
+        right: 38px;
+
+        height: 72px;
+
+        display: flex;
+        align-items: flex-end;
     }
 
     .hello-info-box-big {
@@ -188,7 +200,9 @@
             <div class="hello-info-box">
                 <img class="hello-info-box-img">
                 <p class="hello-info-box-title">{title}</p>
-                <p class="hello-info-box-desc">{@html desc}</p>
+                <div class="hello-info-box-desc-wrapper">
+                    <p class="hello-info-box-desc">{@html desc}</p>
+                </div>
             </div>
         {/each}
     </div>

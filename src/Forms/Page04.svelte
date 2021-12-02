@@ -1,5 +1,5 @@
 <script>
-    import CheckerInput from "../components/FormatInput.svelte";
+    import FormatInput from "../components/FormatInput.svelte";
 
     const key = "04"
 </script>
@@ -8,7 +8,7 @@
 </style>
 <div>
     <h1 class="form-title">이메일 주소를 입력하세요.</h1>
-    <CheckerInput
+    <FormatInput
             pattern={"^[0-9_a-Z]+\@[0-9a-Z]+\.[0-9.a-Z]+"}
             placeHolder="abc1234@gmail.com"
             answerKey={key}

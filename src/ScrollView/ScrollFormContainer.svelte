@@ -52,8 +52,9 @@
         }
     };
 
+    let scrollEnable;
     const scrollUp = async (force) => {
-        if (!force && !$scrollEnableStore)
+        if (!force && !scrollEnable)
             return;
 
         if ($activePageStore <= 0)
@@ -63,7 +64,7 @@
     };
 
     const scrollDown = async (force) => {
-        if (!force && !$scrollEnableStore)
+        if (!force && !scrollEnable)
             return;
 
         const page = pages[$activeSectionStore];
@@ -87,24 +88,12 @@
         nextSection: nextSection,
     });
 
-    const scrollEnableStore = writable(false);
-    $: {
-        scrollEnableStore.set(
-            ($activeSectionStore in pages) &&
-            (pages[$activeSectionStore].length > $activePageStore) &&
-            pages[$activeSectionStore][$activePageStore].scroll)
-    }
+    $: scrollEnable = $activeSectionStore === 0 ? ($activePageStore < 6) :
+        $activeSectionStore === 1 ? ($activePageStore < 7) :
+            $activeSectionStore === 2 ? ($activePageStore < 8) : false;
 
     let scrollClass = "scrollform-fixed";
-    $: scrollClass = $scrollEnableStore ? "scrollform-fixed" : "scrollform-overflow";
-
-    let canScrollDown;
-    $: canScrollDown = $scrollEnableStore &&
-        ($activeSectionStore in pages) &&
-        $activePageStore < pages[$activeSectionStore].length - 1
-
-    let canScrollUp;
-    $: canScrollUp = $scrollEnableStore && $activePageStore > 0;
+    $: scrollClass = scrollEnable ? "scrollform-fixed" : "scrollform-overflow";
 </script>
 
 <style>
@@ -113,7 +102,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 273px;
+        left: 0px;
     }
 
     .scrollform-fixed {
@@ -128,6 +117,7 @@
         position: relative;
         height: 100%;
         width: 100%;
+        padding-left: 273px;
     }
 </style>
 
@@ -135,11 +125,7 @@
     <div class="scrollform-container" bind:this={scrollformContent} on:wheel={handleScroll}>
         <slot>
         </slot>
-        {#if canScrollUp}
-            <ScrollUpButton/>
-        {/if}
-        {#if canScrollDown}
-            <ScrollDownButton/>
-        {/if}
+        <ScrollUpButton/>
+        <ScrollDownButton/>
     </div>
 </div>

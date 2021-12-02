@@ -26,13 +26,13 @@
 </script>
 
 <style>
-    .scrollform-fullpage {
+    .scrollform-scrollpage {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: fit-content;
 
         box-sizing: border-box;
-        padding: 0 0 0 152px;
+        padding: 88px 0 88px 152px;
 
         display: flex;
         align-items: center;
@@ -41,7 +41,7 @@
 </style>
 
 {#if visible}
-    <div transition:slide={transition} class="scrollform-fullpage" style="overflow: auto">
+    <div transition:slide={transition} class="scrollform-scrollpage" style="overflow: auto">
         <slot/>
     </div>
 {/if}

@@ -1,5 +1,5 @@
 <script>
-    import CheckerInput from "../components/FormatInput.svelte";
+    import FormatInput from "../components/FormatInput.svelte";
     import {getContext} from "svelte";
     const { answerStore, answerValid } = getContext("answers");
     const { scrollDown } = getContext("scroll");

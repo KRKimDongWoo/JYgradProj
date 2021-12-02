@@ -5,6 +5,7 @@
     export let answerKey;
     export let label;
     export let iMaskPattern;
+    export let type;
     const { answerStore, answerValid } = getContext("answers");
 
 
@@ -12,7 +13,11 @@
 <form class="form-review-form">
     <label class="form-review-label">{label}</label>
     {#if iMaskPattern == null}
-        <input class="form-review-input" bind:value={$answerStore[answerKey]}>
+        {#if type === "number"}
+            <input class="form-review-input" type="number" bind:value={$answerStore[answerKey]}>
+        {:else}
+            <input class="form-review-input" type="text" bind:value={$answerStore[answerKey]}>
+        {/if}
     {:else}
         <input class="form-review-input" bind:value={$answerStore[answerKey]} use:imask={{mask: iMaskPattern}}>
     {/if}

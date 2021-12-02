@@ -1,7 +1,7 @@
 <script>
     import FormatInput from "../components/FormatInput.svelte";
 
-    const key = "02"
+    const key = "14"
 </script>
 
 <style>
@@ -23,7 +23,7 @@
     }
 </style>
 <div>
-    <h1 class="form-title" data-tooltip="주민등록상의 거주지가 아닙니다.">실제 거주하시는 곳의 주소를 입력하세요.</h1>
+    <h1 class="form-title" data-tooltip="행정상 회사의 주소와는 무관합니다.">실제 근무했던 장소의 주소를 입력하세요.</h1>
     <button class="form-address-button">주소 검색하기</button>
     <FormatInput placeHolder="서울시 관악구 은천로 93" answerKey={key+"0"}/>
     <FormatInput placeHolder="벽산블루밍아파트 11층 1106호" answerKey={key+"1"}/>
