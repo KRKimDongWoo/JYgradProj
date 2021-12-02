@@ -411,10 +411,14 @@ button:focus {
 }
 
 .scroll-button-wrapper {
-	width: 100%;
+	width: fit-content;
 	height: fit-content;
 
 	position: absolute;
+
+	left: 0;
+	right: 0;
+	margin: auto;
 
 	display: flex;
 	align-items: center;
