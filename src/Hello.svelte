@@ -8,10 +8,10 @@
     }
 
     const infos = [
-        {"title": "신청자격", "desc": "누구나 신청 가능합니다."},
-        {"title": "처리기간", "desc": "접수 다음날부터<br>25일 소요됩니다."},
-        {"title": "구비서류", "desc": "따로 필요하지 않습니다."},
-        {"title": "수수료", "desc": "없습니다."}
+        {"title": "신청자격", "desc": "누구나 신청 가능합니다.", "src": "/img/hello-1.png"},
+        {"title": "처리기간", "desc": "접수 다음날부터<br>25일 소요됩니다.", "src": "/img/hello-2.png"},
+        {"title": "구비서류", "desc": "따로 필요하지 않습니다.", "src": "/img/hello-3.png"},
+        {"title": "수수료", "desc": "없습니다.", "src": "/img/hello-4.png"}
     ]
 
 </script>
@@ -70,11 +70,10 @@
     .hello-info-box-img {
         position: absolute;
         top: 40px;
-        left: 28px;
+        left: 48px;
 
-        height: 67px;
-        width: 85px;
-        background-color: #3C3C3C;
+        height: 68px;
+        width: 68px;
     }
 
     .hello-info-box-title {
@@ -209,9 +208,9 @@
 <main>
     <a href="/index.html" class="back-link">&#x1449 임금체불진정서</a>
     <div class="hello-contents"><h1 class="hello-title">안녕하세요.<br><mark class="hello-title-highlight">임금체불진정서</mark> 접수를 시작합니다.</h1>    <div class="hello-info-boxes">
-        {#each infos as {title, desc}}
+        {#each infos as {title, desc, src}}
             <div class="hello-info-box">
-                <img class="hello-info-box-img">
+                <img class="hello-info-box-img" src="{src}" alt="{title}">
                 <p class="hello-info-box-title">{title}</p>
                 <div class="hello-info-box-desc-wrapper">
                     <p class="hello-info-box-desc">{@html desc}</p>

@@ -78,7 +78,7 @@
 
     width: 136px;
     height: 35px;
-    background: #FFFFFF;
+    background: none;
   }
 
   .index-content-wrapper {
@@ -322,7 +322,7 @@
 </style>
 
 <main class="index-main" id="index-main">
-  <img class="index-govern" id="index-govern">
+  <img class="index-govern" id="index-govern" src="/img/govern.png" alt="govern">
   <div class="index-content-wrapper">
     <div class="index-content">
       <h1 class="index-title">찾고 싶은 서식과 관련된 단어를 입력해보세요.</h1>
