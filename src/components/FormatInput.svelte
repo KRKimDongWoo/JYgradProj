@@ -153,7 +153,7 @@
                bind:value={$answerStore[answerKey]}
                bind:this={input}
                use:imask={{mask: iMaskPattern}}
-               on:accept={checkValidity}
+               on:change={checkValidity}
         >
     {/if}
     {#if label != null}

@@ -23,8 +23,8 @@
     }
 </style>
 <div>
-    <h1 class="form-title" data-tooltip="행정상 회사의 주소와는 무관합니다.">실제 근무했던 장소의 주소를 입력하세요.</h1>
+    <h1 class="form-title" data-tooltip="행정상 회사의 주소와는 무관합니다.">실제 근무했던 장소의 <mark class="tooltip-mark">주소</mark>를 입력하세요.</h1>
     <button class="form-address-button">주소 검색하기</button>
-    <FormatInput placeHolder="서울시 관악구 은천로 93" answerKey={key+"0"}/>
-    <FormatInput placeHolder="벽산블루밍아파트 11층 1106호" answerKey={key+"1"}/>
+    <FormatInput placeHolder="서울시 관악구 남부순환로230길 11" answerKey={key+"0"}/>
+    <FormatInput placeHolder="은평빌딩 5층" answerKey={key+"1"}/>
 </div>

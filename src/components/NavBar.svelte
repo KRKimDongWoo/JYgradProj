@@ -113,8 +113,8 @@
         <div class="nav-bar-line-wrapper {$activePageStore === 5 ? 'nav-bar-line-wrapper-selected' : ''}">
             <p class="{LINE} {$answerValid['15'] ? LINE_DONE : ''}">회사 연락처</p>
         </div>
-        <div class="nav-bar-line-wrapper {$activePageStore === 5 ? 'nav-bar-line-wrapper-selected' : ''}">
-            <p class="{LINE} {$answerValid['15'] ? LINE_DONE : ''}">근로자 수</p>
+        <div class="nav-bar-line-wrapper {$activePageStore === 6 ? 'nav-bar-line-wrapper-selected' : ''}">
+            <p class="{LINE} {$answerValid['16'] ? LINE_DONE : ''}">근로자 수</p>
         </div>
     {/if}
     <p class="{TITLE} {$activeSectionStore === 2 ? TITLE_SELECTED : ''}">진정 내용</p>

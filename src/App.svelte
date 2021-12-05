@@ -109,7 +109,7 @@
   .index-content {
     height: fit-content;
     width: 100%;
-    padding: 0 152px;
+    padding: 0 270px;
 
     box-sizing: border-box;
   }
@@ -160,6 +160,7 @@
     flex-grow: 0;
 
     background: #348AFD 0 0 no-repeat padding-box;
+    border: none;
     border-radius: 10px;
     opacity: 1;
   }

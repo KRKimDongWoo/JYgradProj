@@ -30,6 +30,7 @@
         position: relative;
         width: 100%;
         height: 100%;
+        background: #FDFDFA 0 0 no-repeat padding-box;
 
         box-sizing: border-box;
         padding: 0 0 0 152px;

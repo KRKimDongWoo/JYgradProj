@@ -18,14 +18,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(0,80,160);
-}
-
 label {
 	display: block;
 }
@@ -43,6 +35,16 @@ input, button, select, textarea {
 
 input:disabled {
 	color: #ccc;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+input[type="search"] {
+	-webkit-appearance: none;
 }
 
 button {
@@ -65,6 +67,7 @@ button:focus {
 
 .back-link {
 	position: absolute;
+
 	top: 36px;
 	left: 52px;
 
@@ -73,6 +76,10 @@ button:focus {
 	letter-spacing: 0;
 	color: #000000;
 	opacity: 1;
+}
+
+.back-link:visited {
+	color: #000000;
 }
 
 
@@ -97,7 +104,7 @@ button:focus {
 
 .form-input {
 	background: #FFFFFF 0 0 no-repeat padding-box;
-	border: 2px solid #707070;
+	border: 3px solid #707070;
 	opacity: 1;
 	margin: 0;
 
@@ -114,17 +121,19 @@ button:focus {
 }
 
 .form-input:invalid {
-	border: 2px solid #FF0000;
+	border: 3px solid #FF0000;
 	opacity: 1;
 }
 
 .form-input:valid {
-	border: 2px solid #707070;
+	border: 3px solid #707070;
 	opacity: 1;
 }
 
 .form-input:focus {
 	color: #348AFD;
+	border: 3px solid #348AFD;
+	outline: none;
 }
 
 .form-input::placeholder {
@@ -140,6 +149,8 @@ button:focus {
 
 .form-button-main {
 	margin-right: 60px;
+	height: 158px;
+	white-space: pre-wrap;
 
 	background: #348AFD 0 0 no-repeat padding-box;
 	border-radius: 10px;
@@ -154,7 +165,14 @@ button:focus {
 	color: #FFFFFF;
 }
 
+.form-button-main:hover {
+	background: #579BF8;
+}
+
 .form-button-sub {
+	height: 158px;
+	white-space: pre-wrap;
+
 	background: #FFFFFF00 0 0 no-repeat padding-box;
 	border: 3px solid #348AFD;
 	border-radius: 10px;
@@ -167,6 +185,11 @@ button:focus {
 	font: normal normal 500 36px/36px noto-sans-cjk-kr;
 	letter-spacing: 0;
 	color: #348AFD;
+}
+
+.form-button-sub:hover {
+	background: #E0EBFF;
+	border: 3px solid #348AFD;
 }
 
 .form-button-group {
@@ -182,6 +205,7 @@ button:focus {
 	flex-grow: 1;
 
 	background: #EFEFEF 0 0 no-repeat padding-box;
+	border: none;
 	border-radius: 10px;
 	opacity: 1;
 
@@ -191,13 +215,19 @@ button:focus {
 	color: #000000;
 }
 
+.form-button-group-button:hover {
+	background: #E2E2E2;
+}
+
 .form-button-group-button-selected {
 	background: #348AFD 0 0 no-repeat padding-box;
+	border: none;
 	color: #FFFFFF;
 }
 
 .form-number {
 	display: flex;
+	position: relative;
 	align-items: center;
 }
 
@@ -270,6 +300,7 @@ button:focus {
 
 .form-review-mark {
 	background: none;
+	font-weight: bold;
 	color: #348AFD;
 }
 
@@ -287,7 +318,7 @@ button:focus {
 
 .form-review-form:focus-within input {
 	background: #FFFFFF 0 0 no-repeat padding-box;
-	border: 2px solid #348AFD;
+	border: 3px solid #348AFD;
 	border-radius: 0;
 	opacity: 1;
 
@@ -331,6 +362,10 @@ button:focus {
 	opacity: 1;
 }
 
+.form-review-label-disabled {
+	color: #707070;
+}
+
 .form-review-input {
 	height: 100%;
 
@@ -345,6 +380,14 @@ button:focus {
 	font: normal normal bold 28px/72px noto-sans-cjk-kr;
 	letter-spacing: 0;
 	color: #000000;
+}
+.form-review-input:focus {
+	outline: none;
+}
+
+.form-review-input:disabled {
+	color: #CDCDCD;
+	opacity: 1;
 }
 
 .form-review-submit-button {
@@ -377,6 +420,7 @@ button:focus {
 
 .form-review-button-main {
 	margin-right: 60px;
+	white-space: pre-wrap;
 
 	background: #348AFD 0 0 no-repeat padding-box;
 	border-radius: 10px;
@@ -391,6 +435,10 @@ button:focus {
 	font: normal normal 500 36px/36px noto-sans-cjk-kr;
 	letter-spacing: 0;
 	color: #FFFFFF;
+}
+
+.form-review-button-main:hover {
+	background: #579BF8;
 }
 
 .form-review-button-sub {
@@ -410,6 +458,10 @@ button:focus {
 	color: #348AFD;
 }
 
+.form-review-button-sub:hover {
+	background: #E0EBFF;
+}
+
 .scroll-button-wrapper {
 	width: fit-content;
 	height: fit-content;
@@ -426,7 +478,7 @@ button:focus {
 }
 
 .scroll-container {
-	opacity: 0.3;
+	opacity: 0.6;
 	cursor: pointer;
 }
 
@@ -474,6 +526,13 @@ button:focus {
 	transform: rotate(45deg);
 }
 
+.tooltip-mark {
+	background: none;
+	font-weight: inherit;
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+}
+
 [data-tooltip] {
 	position: relative;
 	z-index: 2;
@@ -505,6 +564,7 @@ button:focus {
 	background: #348AFD 0 0 no-repeat padding-box;
 	box-shadow: 0 0 30px #348AFD4D;
 	content: attr(data-tooltip);
+	white-space: pre-wrap;
 	text-align: center;
 	transition: .2s ease-out;
 

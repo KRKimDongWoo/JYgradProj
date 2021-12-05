@@ -7,8 +7,8 @@
 
     let visible;
     $: visible = $activeSectionStore === 0 ? (0 < $activePageStore && $activePageStore < 6) :
-        $activeSectionStore === 1 ? (0 < $activePageStore && $activePageStore < 7) :
-        $activeSectionStore === 2 ? (0 < $activePageStore && $activePageStore < 8) : false;
+        $activeSectionStore === 1 ? (0 <= $activePageStore && $activePageStore < 7) :
+        $activeSectionStore === 2 ? (0 <= $activePageStore && $activePageStore < 8) : false;
 
 </script>
 

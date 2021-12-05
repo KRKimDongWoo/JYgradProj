@@ -4,7 +4,8 @@
 
 <style>
     .chip-main {
-        margin: 4px;
+        margin-right: 36px;
+        margin-bottom: 28px;
         padding: 12px 36px;
 
         width: fit-content;

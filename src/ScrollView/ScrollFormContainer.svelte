@@ -57,8 +57,10 @@
         if (!force && !scrollEnable)
             return;
 
-        if ($activePageStore <= 0)
-            return;
+        if ($activePageStore <= 0) {
+          prevSection();
+          return;
+        }
 
         activePageStore.update(n => n - 1);
     };
@@ -74,6 +76,13 @@
         }
     };
 
+    const prevSection = () => {
+      if ($activeSectionStore > 0) {
+        activeSectionStore.update(n => n - 1);
+        activePageStore.set(pages[$activeSectionStore].length - 1);
+      }
+    }
+
     const nextSection = () => {
         console.log(`${$activeSectionStore} vs ${sections.length}`)
         if ($activeSectionStore < sections.length - 1) {
@@ -86,6 +95,7 @@
         scrollDown: scrollDown,
         scrollUp: scrollUp,
         nextSection: nextSection,
+        prevSection: prevSection,
     });
 
     $: scrollEnable = $activeSectionStore === 0 ? ($activePageStore < 6) :

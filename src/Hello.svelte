@@ -159,6 +159,7 @@
 
     .hello-button-back {
         margin-right: 60px;
+        white-space: pre-wrap;
 
         flex-grow: 0;
         flex-shrink: 0;
@@ -175,13 +176,21 @@
         color: #348AFD;
     }
 
+    .hello-button-back:hover {
+        background: #E0EBFF;
+    }
+
     .hello-button-check {
+        white-space: pre-wrap;
+
+
         flex-grow: 0;
         flex-shrink: 0;
         width: 917px;
         height: 158px;
 
         background: #348AFD 0 0 no-repeat padding-box;
+        border: none;
         border-radius: 10px;
         opacity: 1;
 
@@ -189,6 +198,10 @@
         font: normal normal 500 36px/36px Noto Sans CJK KR;
         letter-spacing: 0;
         color: #FFFFFF;
+    }
+
+    .hello-button-check:hover {
+        background: #579BF8;
     }
 
 </style>
@@ -231,8 +244,8 @@
             </table>
         </div>
         <div class="hello-buttons">
-            <button class="hello-button-back" on:click={toIndexPage}>&#x1449&#x2800목록으로</button>
-            <button class="hello-button-check" on:click={toFormPage}>&#x2713&#x2800&#x2800확인했습니다. 다음 단계로 넘어갑니다.</button>
+            <button class="hello-button-back" on:click={toIndexPage}>&#x1449    목록으로</button>
+            <button class="hello-button-check" on:click={toFormPage}>&#x2713    확인했습니다. 다음 단계로 넘어갑니다.</button>
         </div>
     </div>
 </main>

@@ -30,6 +30,7 @@
         position: relative;
         width: 100%;
         height: fit-content;
+        background: #FDFDFA 0 0 no-repeat padding-box;
 
         box-sizing: border-box;
         padding: 88px 0 88px 152px;
