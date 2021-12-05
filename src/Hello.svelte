@@ -121,7 +121,7 @@
         margin: 16px 0;
         padding: 52px 40px;
         width: 1333px;
-        height: 504px;
+        height: 328px;
 
         box-sizing: border-box;
 
@@ -134,7 +134,7 @@
         width: 218px;
 
         text-align: left;
-        font: normal normal bold 24px/44px Noto Sans CJK KR;
+        font: normal normal bold 24px/40px Noto Sans CJK KR;
         letter-spacing: 0;
         color: #000000;
         opacity: 1;
@@ -143,7 +143,7 @@
     .hello-info-box-td-2 {
         width: 780px;
         text-align: left;
-        font: normal normal 500 24px/44px Noto Sans CJK KR;
+        font: normal normal 500 24px/40px Noto Sans CJK KR;
         letter-spacing: 0;
         color: #000000;
         opacity: 1;
@@ -159,6 +159,8 @@
     .hello-button-back {
         margin-right: 60px;
         white-space: pre-wrap;
+
+        background: none;
 
         flex-grow: 0;
         flex-shrink: 0;

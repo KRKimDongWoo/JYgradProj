@@ -8,7 +8,7 @@
 <style>
 </style>
 <div>
-    <h1 class="form-title">정보 수집 및 보관에 동의하시면, 민원신청 처리상황을<br>문자메시지, 전화를 통해 제공받으실 수 있습니다.</h1>
+    <h1 class="form-title">해당 사업체는 어떤 유형입니까?</h1>
     <div class="form-button-group">
         <button style="margin-right: 60px;"
                 class="form-button-group-button {$answerStore[key] === '사업장' ? 'form-button-group-button-selected' : ''}"

@@ -27,9 +27,7 @@
     })
 
     function checkValidity() {
-        errorValid = true;
-        error = input.value > 0;
-        $answerValid[answerKey] = !error;
+        $answerValid[answerKey] = true;
     }
 </script>
 

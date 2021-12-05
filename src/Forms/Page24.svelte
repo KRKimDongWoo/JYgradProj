@@ -1,5 +1,4 @@
 <script>
-    import FormatInput from "../components/FormatInput.svelte";
     import NumberInput from "../components/NumberInput.svelte";
 
     const key = "24"

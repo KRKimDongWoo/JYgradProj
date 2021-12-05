@@ -228,6 +228,7 @@ button:focus {
 .form-number {
 	display: flex;
 	position: relative;
+	width: fit-content;
 	align-items: center;
 }
 
