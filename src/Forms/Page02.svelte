@@ -1,7 +1,5 @@
 <script>
     import FormatInput from "../components/FormatInput.svelte";
-    import FormTitle from "../components/FormTitle.svelte";
-
     const key = "02"
 </script>
 
